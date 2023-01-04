@@ -240,7 +240,7 @@ public class LaunchApp {
 	public String inputSalary(String currentValue) throws IOException {
 		while(true) {
 			System.out.print(currentValue == null ? "Enter salary: " : "Enter salary (current is '" + currentValue + "', enter to skip): ");
-			String input = this.br.readLine();
+			String input = this.br.readLine().trim();
 			
 			if(currentValue != null && input.equals("")) {
 				return null;
@@ -251,14 +251,14 @@ public class LaunchApp {
 				continue;
 			}
 			
-			return input.trim();
+			return input;
 		}
 	}
 	
 	public String inputAddress(String currentValue) throws IOException {
 		while(true) {
 			System.out.print(currentValue == null ? "Enter address: " : "Enter address (current is '" + currentValue + "', enter to skip): ");
-			String input = this.br.readLine();
+			String input = this.br.readLine().trim();
 			
 			if(currentValue != null && input.equals("")) {
 				return null;
@@ -269,14 +269,14 @@ public class LaunchApp {
 				continue;
 			}
 			
-			return input.trim();
+			return input;
 		}
 	}
 	
 	public String inputLastName(String currentValue) throws IOException {
 		while(true) {
 			System.out.print(currentValue == null ? "Enter last name: " : "Enter last name (current is '" + currentValue + "', enter to skip): ");
-			String input = this.br.readLine();
+			String input = this.br.readLine().trim();
 			
 			if(currentValue != null && input.equals("")) {
 				return null;
@@ -287,14 +287,14 @@ public class LaunchApp {
 				continue;
 			}
 			
-			return input.trim();
+			return input;
 		}
 	}
 	
 	public String inputFirstName(String currentValue) throws IOException {
 		while(true) {
 			System.out.print(currentValue == null ? "Enter first name: " : "Enter first name (current is '" + currentValue + "', enter to skip): ");
-			String input = this.br.readLine();
+			String input = this.br.readLine().trim();
 			
 			if(currentValue != null && input.equals("")) {
 				return null;
@@ -305,14 +305,14 @@ public class LaunchApp {
 				continue;
 			}
 			
-			return input.trim();
+			return input;
 		}
 	}
 	
 	public String inputId(boolean addOperation) throws IOException {
 		while(true) {
 			System.out.print("Enter employee ID: ");
-			String input = this.br.readLine();
+			String input = this.br.readLine().trim().toLowerCase();
 			
 			if(!this.appService.validateId(input)) {
 				System.out.println("ID must be between 8 - 20 chars");
@@ -323,7 +323,7 @@ public class LaunchApp {
 				continue;
 			}
 			
-			return input.trim().toLowerCase();
+			return input;
 		}
 	}
 	
